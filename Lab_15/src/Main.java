@@ -23,7 +23,7 @@ public class Main {
                 }
                 case "upload" -> {
                     try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("person.txt"))) {
-                        Calculation cal = (Calculation) ois.readObject();
+                        Calculation cal = (Calculation)ois.readObject();
                         System.out.println("x=" + cal.x + " y=" + cal.y);
                     } catch (Exception ex) {
                         System.out.println(ex.getMessage());
